@@ -16,20 +16,20 @@ electronic.addEventListener("click", (e) => {
 })
 
 let jewelry = document.getElementById("jewelry");
-//console.log(electronic);
 jewelry.addEventListener("click", (e) => {
     console.log("click");
+    fakeStoreFetch("/category/jewelry");
 })
 
 let men = document.getElementById("men");
-//console.log(electronic);
 men.addEventListener("click", (e) => {
     console.log("click");
+    fakeStoreFetch("/category/men");
 })
 
 let women = document.getElementById("womens");
-//console.log(women);
 women.addEventListener("click", (e) => {
     console.log("click");
+    fakeStoreFetch("/category/women");
 })
 
