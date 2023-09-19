@@ -1,35 +1,36 @@
 let electronic = document.getElementById("electronics");
+let jewelry = document.getElementById("jewelry");
+let men = document.getElementById("men");
+let women = document.getElementById("womens");
+let display = document.getElementById("display");
 let url = 'https://fakestoreapi.com/products';
-const fakeStoreFetch = async (endpoint) => {
+
+const fakeStore = async (endpoint) => {
     let res = await fetch(url + endpoint)
     let results = await res.json()
     console.log(results)
 }
 
-window.onload = (e) => {
-    fakeStoreFetch("/");
-  };
-
 electronic.addEventListener("click", (e) => {
+    fakeStore("/category/electronics");
     console.log("click");
-    fakeStoreFetch("/category/electronics");
 })
 
-let jewelry = document.getElementById("jewelry");
 jewelry.addEventListener("click", (e) => {
+    fakeStore("/category/jewelry");
     console.log("click");
-    fakeStoreFetch("/category/jewelry");
 })
 
-let men = document.getElementById("men");
 men.addEventListener("click", (e) => {
+    fakeStore("/category/men");
     console.log("click");
-    fakeStoreFetch("/category/men");
 })
 
-let women = document.getElementById("womens");
 women.addEventListener("click", (e) => {
+    fakeStore("/category/women");
     console.log("click");
-    fakeStoreFetch("/category/women");
 })
 
+window.onload = (e) => {
+    fakeStore("/");
+    };
