@@ -1,8 +1,8 @@
 body {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  overflow: hidden;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -11,8 +11,8 @@ body {
 }
 
 #display {
-  align-items: center;
-  margin-top: 5px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 #footer {
@@ -28,11 +28,6 @@ body {
     background: black;
   }
 
-  #display {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-  }
+
 
   
